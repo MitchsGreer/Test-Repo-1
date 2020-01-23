@@ -1,16 +1,13 @@
-language: 
-	python
+language: c
 
-# install:
-# 	- gcc Hello_World.c -o Hello_world
-# 	- ./Hello_World
+os:
+	linux
 
-# deploy:
-# 	- provider: pages
-# 	  skip_cleanup: true
-# 	  github_token: $GITHUB_TOKEN
-# 	  local_dir: ./
-# 	  repo: pyviz-dev/param
-# 	  on:
-# 		tags: true
-# 		all_branches: true
+compiler: 
+	gcc
+	g++
+	cc
+
+install:
+	- gcc Hello_World.c -o Hello_world
+	- ./Hello_World
