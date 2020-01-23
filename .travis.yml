@@ -1,13 +1,4 @@
-
-addons:
-
-env:
-
-language: c
-
-services:
-
-stages:
+language: python
 
 install:
 	- gcc Hello_World.c -o Hello_world
