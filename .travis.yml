@@ -1,0 +1,24 @@
+
+addons:
+
+env:
+
+language: c
+
+services:
+
+stages:
+
+install:
+	- gcc Hello_World.c -o Hello_world
+	- ./Hello_World
+
+deploy:
+	- provider: pages
+	  skip_cleanup: true
+	  github_token: $GITHUB_TOKEN
+	  local_dir: ./
+	  repo: pyviz-dev/param
+	  on:
+		tags: true
+		all_branches: true
